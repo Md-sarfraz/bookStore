@@ -51,18 +51,27 @@
                 </form> -->
                 <form th:action="@{/save}" method="post" th:object="${book}">
                     <label for="name">Title:</label>
-                    <input type="text" id="name" class="w-full border border-gray-300 rounded-md px-4 py-2 focus:ring focus:ring-blue-200"  name="name" th:field="*{name}" required />
-                    
+                    <input type="text" id="name"
+                        class="w-full border border-gray-300 rounded-md px-4 py-2 focus:ring focus:ring-blue-200"
+                        name="name" th:field="*{name}" required />
+
                     <label for="author">Author:</label>
-                    <input type="text" id="author" class="w-full border border-gray-300 rounded-md px-4 py-2 focus:ring focus:ring-blue-200" name="author" th:field="*{author}" required />
-                    
+                    <input type="text" id="author"
+                        class="w-full border border-gray-300 rounded-md px-4 py-2 focus:ring focus:ring-blue-200"
+                        name="author" th:field="*{author}" required />
+
                     <label for="price">Price:</label>
-                    <input type="text" id="price"  class="w-full border border-gray-300 rounded-md px-4 py-2 focus:ring focus:ring-blue-200"name="price" th:field="*{price}" required />
-                    
-                    <button type="submit">Save</button>
+                    <input type="text" id="price"
+                        class="w-full border border-gray-300 rounded-md px-4 py-2 focus:ring focus:ring-blue-200"
+                        name="price" th:field="*{price}" required />
+
+                    <button type="submit"
+                        class="mt-4 w-full bg-blue-500 text-white font-semibold py-2 px-4 rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-300">
+                        Save
+                    </button>
                 </form>
-                
-                
+
+
 
             </div>
         </div>

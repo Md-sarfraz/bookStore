@@ -43,27 +43,14 @@
                     </thead>
                     <!-- Table Body -->
                     <tbody>
-                        <tr class="bg-white hover:bg-gray-50">
-                            <td class="px-6 py-4 border border-gray-300">1</td>
-                            <td class="px-6 py-4 border border-gray-300">Mark</td>
-                            <td class="px-6 py-4 border border-gray-300">Otto</td>
-                            <td class="px-6 py-4 border border-gray-300">@mdo</td>
-                            <td class="px-6 py-4 border border-gray-300">@mdo</td>
+                        <tr th:each="b : ${list}" class="bg-white hover:bg-gray-50">
+                            <td class="px-6 py-4 border border-gray-300" th:text="${b.id}"></td>
+                            <td class="px-6 py-4 border border-gray-300" th:text="${b.name}"></td>
+                            <td class="px-6 py-4 border border-gray-300" th:text="${b.author}"></td>
+                            <td class="px-6 py-4 border border-gray-300" th:text="${b.price}"></td>
+                            <td><a class="btn btn-secondary btn-sm">Add to my book</a></td>
                         </tr>
-                        <tr class="bg-white hover:bg-gray-50">
-                            <td class="px-6 py-4 border border-gray-300">2</td>
-                            <td class="px-6 py-4 border border-gray-300">Jacob</td>
-                            <td class="px-6 py-4 border border-gray-300">Thornton</td>
-                            <td class="px-6 py-4 border border-gray-300">@fat</td>
-                            <td class="px-6 py-4 border border-gray-300">@mdo</td>
-                        </tr>
-                        <tr class="bg-white hover:bg-gray-50">
-                            <td class="px-6 py-4 border border-gray-300">3</td>
-                            <td class="px-6 py-4 border border-gray-300">Larry the Bird</td>
-                            <td class="px-6 py-4 border border-gray-300">@twitter</td>
-                            <td class="px-6 py-4 border border-gray-300">@twitter</td>
-                            <td class="px-6 py-4 border border-gray-300">@mdo</td>
-                        </tr>
+                        
                     </tbody>
                 </table>
             </div>
